@@ -8,16 +8,15 @@ MIPL Billing & Payment Tracker - code package
      that browser only (localStorage). No logins, no file attachments.
    - Good for trying the idea or running it on one computer.
 
-2) multi-user-claude-hosted.html
-   - The full version: logins/roles, shared live data, file attachments,
-     bank-match ticks, follow-ups, reports, audit log.
-   - It uses claude.ai's built-in services (user, db, assets, downloads),
-     so it only works when published as a claude.ai Artifact.
-     Opened directly from this file it will show a "sign in" message.
-   - To move it to your own hosting, the claude.ai services must be replaced:
-       user  -> your login system (e.g. Firebase Auth / company SSO)
-       db    -> a database (e.g. Firestore, Supabase, PostgreSQL + API)
-       assets-> file storage (e.g. S3, Supabase Storage)
-     The screens and calculations (function calc) can be reused as they are.
+2) multi-user.html
+   - Open with VS Code Live Server to use the tracker dashboard, invoices,
+     payments, reports, audit log, and attachments.
+   - Data is saved in this browser only (localStorage); it is not shared
+     between users or devices. Clearing browser data removes saved records.
+   - This local version has one Admin profile. Shared accounts and roles
+     require a hosted authentication, database, and file-storage backend.
+   - Use Projects to add/edit projects and configure payment methods.
+     Projects appear in the new-invoice dropdown; payment methods appear
+     when recording a payment. Existing invoices and receipts are preserved.
 
 All names, amounts and clients are made-up demo data.
